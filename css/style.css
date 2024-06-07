@@ -1764,6 +1764,7 @@ button,
 .banner .banner__background-picture {
   position: absolute;
   z-index: -1;
+  width: 100%;
 }
 
 .banner .container {
@@ -1852,7 +1853,7 @@ button,
   width: 228px;
   border-style: solid;
   border-color: #FE7865;
-  border-width: 4px;
+  border-width: 2px;
   content: "";
 }
 
@@ -1875,14 +1876,19 @@ button,
   justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-column-gap: 60px;
-  -moz-column-gap: 60px;
-  column-gap: 60px;
-  row-gap: 100px;
+  row-gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -60px;
+  margin-top: -60px;
+  width: calc(100% + 60px);
 }
 
 .tour-places .container .tour-places__places-list .tour-places__places-list-content {
   position: relative;
+  margin-left: 60px;
+  margin-top: 60px;
+  width: calc(33.3333333333% - 60px);
 }
 
 .tour-places .container .tour-places__places-list .tour-places__places-list-content .tour-places__places-list-text-content {
@@ -1908,6 +1914,14 @@ button,
   background-color: #ffffff;
 }
 
+.tour-places .container .tour-places__places-list .tour-places__places-list-content img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 350/430;
+}
+
 .tours {
   position: relative;
   margin-bottom: 256px;
@@ -1919,32 +1933,47 @@ button,
   z-index: -2;
 }
 
-.tours .container .slider-tab .slider-tab__nav {
+.tours .container .tabs .tabs__nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   gap: 99px;
   padding-bottom: 15px;
   margin-bottom: 80px;
 }
 
-.tours .container .slider-tab .slider-tab__nav .slider-tab__nav-item {
+.tours .container .tabs .tabs__nav .tabs__nav-item {
   font-size: 20px;
   font-weight: 500;
+  letter-spacing: -0.41px;
   color: #2C2E3F;
   opacity: 30%;
 }
 
-.tours .container .slider-tab .slider-tab__nav .slider-tab__nav-item--active {
+.tours .container .tabs .tabs__nav .tabs__nav-item--active {
   color: #FE7865;
   opacity: 100%;
 }
 
-.tours .container .slider-tab .slider-tab__slides .slider-tab__slide {
+.tours .container .tabs .tabs__nav::after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  min-width: 100%;
+  border-bottom: 1px solid #2C2E3F;
+  opacity: 30%;
+  content: "";
+}
+
+.tours .container .tabs .tabs__slides .tabs__slide {
   display: none;
 }
 
-.tours .container .slider-tab .slider-tab__slides .slider-tab__slide--active {
+.tours .container .tabs .tabs__slides .tabs__slide--active {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1952,19 +1981,20 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.tours .container .slider-tab .slider-tab__slides .slider-tab__slide--active .slide-background-picture {
+.tours .container .tabs .tabs__slides .tabs__slide--active .slide-background-picture {
   position: absolute;
   top: -5%;
   right: 20%;
   z-index: -1;
 }
 
-.tours .container .slider-tab .slider-tab__slides .slider-tab__slide--active .slider-tab__slide-description .slider-tab__description-title {
+.tours .container .tabs .tabs__slides .tabs__slide--active .tabs__tab-description .tabs__description-title {
+  position: relative;
   padding: 0;
   padding-bottom: 20px;
   margin: 0;
@@ -1976,7 +2006,18 @@ button,
   color: #2C2E3F;
 }
 
-.tours .container .slider-tab .slider-tab__slides .slider-tab__slide--active .slider-tab__slide-description .slider-tab__slide-desc {
+.tours .container .tabs .tabs__slides .tabs__slide--active .tabs__tab-description .tabs__description-title::after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  min-width: 175px;
+  border-style: solid;
+  border-color: #FE7865;
+  border-width: 2px;
+  content: "";
+}
+
+.tours .container .tabs .tabs__slides .tabs__slide--active .tabs__tab-description .tabs__tab-desc {
   margin: 0;
   margin-bottom: 50px;
   letter-spacing: -0.47px;
@@ -1986,7 +2027,7 @@ button,
   opacity: 70%;
 }
 
-.tours .container .slider-tab .slider-tab__slides .slider-tab__slide--active .slider-tab__slide-description .slider-tab__btn-order-now {
+.tours .container .tabs .tabs__slides .tabs__slide--active .tabs__tab-description .tabs__btn-order-now {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2004,13 +2045,13 @@ button,
   cursor: pointer;
 }
 
-.tours .container .slider-tab .slider-tab__slides .slider-tab__slide--active .slider-tab__slide__review {
-  margin-top: 97px;
+.tours .container .tabs .tabs__slides .tabs__slide--active .tabs__slide-review {
   padding: 30px;
   background-color: #ffffff;
 }
 
-.tours .container .slider-tab .slider-tab__slides .slider-tab__slide--active .slider-tab__slide__review .slider-tab__review__title {
+.tours .container .tabs .tabs__slides .tabs__slide--active .tabs__slide-review .tabs__review-title {
+  position: relative;
   padding-bottom: 10px;
   margin-bottom: 20px;
   font-weight: 500;
@@ -2018,7 +2059,19 @@ button,
   font-size: 30px;
 }
 
-.tours .container .slider-tab .slider-tab__slides .slider-tab__slide--active .slider-tab__slide__review .slider-tab__review-content {
+.tours .container .tabs .tabs__slides .tabs__slide--active .tabs__slide-review .tabs__review-title::after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  min-width: 68px;
+  border-style: solid;
+  border-color: #FE7865;
+  border-width: 1px;
+  opacity: 30%;
+  content: "";
+}
+
+.tours .container .tabs .tabs__slides .tabs__slide--active .tabs__slide-review .tabs__review-content {
   margin: 0;
   margin-bottom: 35px;
   line-height: 28px;
@@ -2028,7 +2081,7 @@ button,
   opacity: 70%;
 }
 
-.tours .container .slider-tab .slider-tab__slides .slider-tab__slide--active .slider-tab__slide__review .slider-tab__review-user {
+.tours .container .tabs .tabs__slides .tabs__slide--active .tabs__slide-review .tabs__review-user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2038,7 +2091,7 @@ button,
   gap: 16px;
 }
 
-.tours .container .slider-tab .slider-tab__slides .slider-tab__slide--active .slider-tab__slide__review .slider-tab__review-user .slider-tab__username {
+.tours .container .tabs .tabs__slides .tabs__slide--active .tabs__slide-review .tabs__review-user .tabs__username {
   font-weight: 500;
   letter-spacing: -0.47px;
   font-size: 16px;
@@ -2093,6 +2146,7 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
   margin-bottom: 40px;
 }
 
@@ -2111,12 +2165,26 @@ button,
 }
 
 .products .container .products__list .products__list-item .products-wrapper .products__item-title .desc {
+  position: relative;
   padding-bottom: 28px;
   margin-bottom: 30px;
   font-size: 16px;
 }
 
+.products .container .products__list .products__list-item .products-wrapper .products__item-title .desc::after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  min-width: 310px;
+  border-style: solid;
+  border-color: #2C2E3F;
+  border-width: 1px;
+  opacity: 30%;
+  content: "";
+}
+
 .products .container .products__list .products__list-item .products-wrapper .products-list-content .products__list-content-item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2124,6 +2192,7 @@ button,
   -ms-flex-align: start;
   align-items: flex-start;
   gap: 8px;
+  padding-left: 30px;
   margin-bottom: 15px;
 }
 
@@ -2131,6 +2200,19 @@ button,
   font-size: 16px;
   line-height: 32px;
   color: #2C2E3F;
+}
+
+.products .container .products__list .products__list-item .products-wrapper .products-list-content .products__list-content-item::before {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 14px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #2C2E3F;
+  background-image: url("../../img/svg/check-mark-black.svg");
+  content: "";
 }
 
 .products .container .products__list .products__list-item .products-wrapper .products-list-content .products__list-content-item:last-child {
@@ -2169,11 +2251,32 @@ button,
   letter-spacing: 0;
 }
 
+.products .container .products__list .products__list-item:hover .products-wrapper .products__item-title .desc::after {
+  border-color: #FE7865;
+}
+
+.products .container .products__list .products__list-item:hover .products-wrapper .products-list-content .products__list-content-item::before {
+  background-image: url("../../img/svg/check-mark-orange.svg");
+}
+
 .products .container .products__desc .title {
+  position: relative;
   padding-bottom: 20px;
   margin-bottom: 30px;
+  line-height: 90px;
   font-weight: 600;
   font-size: 55px;
+}
+
+.products .container .products__desc .title::after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  min-width: 175px;
+  border-style: solid;
+  border-color: #FE7865;
+  border-width: 1px;
+  content: "";
 }
 
 .products .container .products__desc .desc {
@@ -2256,11 +2359,19 @@ button,
 }
 
 .questions .container .questions__form .questions__form-inputs {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 19px;
   margin-bottom: 25px;
+}
+
+.questions .container .questions__form .questions__form-inputs .questions-wraper {
+  position: absolute;
+  left: 15px;
+  top: 6px;
+  color: #FE7865;
 }
 
 .questions .container .questions__form .questions__form-inputs .questions__form-input {
@@ -2288,6 +2399,26 @@ button,
 .questions .container .questions__form .questions__form-inputs .questions__form-input::placeholder {
   font-size: 14px;
   color: #141517;
+}
+
+.questions .container .questions__form .questions__form-inputs .questions__form-number::-webkit-input-placeholder::before {
+  content: "*123123131";
+  color: #FE7865;
+}
+
+.questions .container .questions__form .questions__form-inputs .questions__form-number::-moz-placeholder::before {
+  content: "*123123131";
+  color: #FE7865;
+}
+
+.questions .container .questions__form .questions__form-inputs .questions__form-number::-ms-input-placeholder::before {
+  content: "*123123131";
+  color: #FE7865;
+}
+
+.questions .container .questions__form .questions__form-inputs .questions__form-number::placeholder::before {
+  content: "*123123131";
+  color: #FE7865;
 }
 
 .questions .container .questions__form .questions__btn .questions__btn-order-now {
