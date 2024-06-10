@@ -568,6 +568,7 @@ button,
   min-height: 100vh;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
+  overflow: hidden;
 }
 
 .wrapper .header,
@@ -2059,6 +2060,7 @@ button,
 }
 
 .tours .container .tabs .tabs__slides .tabs__slide--active .tabs__tab-description .tabs__tab-desc {
+  max-width: 370px;
   margin: 0;
   margin-bottom: 50px;
   letter-spacing: -0.47px;
@@ -2117,6 +2119,7 @@ button,
 }
 
 .tours .container .tabs .tabs__slides .tabs__slide--active .tabs__slide-review .tabs__review-content {
+  max-width: 322px;
   margin: 0;
   margin-bottom: 35px;
   line-height: 28px;
@@ -2171,7 +2174,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 370px;
+  max-width: 370px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -2214,6 +2217,7 @@ button,
   position: relative;
   padding-bottom: 28px;
   margin-bottom: 30px;
+  max-width: 289px;
   font-size: 16px;
 }
 
@@ -2238,7 +2242,7 @@ button,
   -ms-flex-align: start;
   align-items: flex-start;
   gap: 8px;
-  padding-left: 30px;
+  padding-left: 25px;
   margin-bottom: 15px;
 }
 
@@ -2270,13 +2274,8 @@ button,
 }
 
 .products .container .products__list .products__list-item .products__button .btn-order-now {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 30px 70px;
+  min-width: 310px;
+  padding: 30px 69px;
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -2325,6 +2324,7 @@ button,
 }
 
 .products .container .products__desc .desc {
+  max-width: 299px;
   margin: 0;
   margin-bottom: 60px;
   opacity: 70%;
@@ -2332,8 +2332,8 @@ button,
 }
 
 .products .container .products__desc .products__contacts .products__contacts-title {
-  margin-left: 46px;
   margin-bottom: 13px;
+  text-align: center;
   font-weight: 500;
   font-size: 22px;
 }
@@ -2622,6 +2622,199 @@ button,
 
   .tour-places .container .tour-places__places-list .tour-places__places-list-content {
     position: relative;
+  }
+
+  .tours {
+    margin-bottom: 112px;
+  }
+
+  .tours .tabs-background {
+    display: none;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .slide-background-picture {
+    left: 0;
+    top: unset;
+    bottom: 0;
+    width: calc(100% + 48px);
+    max-width: unset;
+    height: 415px;
+    margin: 0 -24px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__tab-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 110px;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__tab-description .tabs__description-title {
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 150%;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__tab-description .tabs__description-title::after {
+    display: none;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__tab-description .tabs__tab-desc {
+    min-width: 726px;
+    text-align: center;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__tab-description .tabs__btn-order-now {
+    font-size: 10px;
+    padding: 19px 52px;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__slide-review {
+    max-width: 382px;
+    padding: 30px 30px 0 30px;
+  }
+
+  .products .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .products .container .products__list {
+    max-width: 626px;
+  }
+
+  .products .container .products__list .products__list-item {
+    position: relative;
+    min-width: unset;
+    max-width: 288px;
+    padding: 30px 20px;
+  }
+
+  .products .container .products__list .products__list-item .products-wrapper {
+    max-width: 248px;
+  }
+
+  .products .container .products__list .products__list-item .products-wrapper .products__item-title .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    row-gap: 10px;
+    margin-bottom: 11px;
+  }
+
+  .products .container .products__list .products__list-item .products-wrapper .products__item-title .title .title-text {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .products .container .products__list .products__list-item .products-wrapper .products__item-title .title .price {
+    font-size: 25px;
+    line-height: 34px;
+  }
+
+  .products .container .products__list .products__list-item .products-wrapper .products__item-title .desc {
+    max-width: 248px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .products .container .products__list .products__list-item .products-wrapper .products__item-title .desc::after {
+    min-width: 248px;
+  }
+
+  .products .container .products__list .products__list-item .products-wrapper .products__list-content .products__list-content-item:last-child {
+    margin-bottom: 45px;
+  }
+
+  .products .container .products__list .products__list-item .products__button .btn-order-now {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 19px 69px;
+    min-width: 145px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .products .container .products__desc {
+    margin-bottom: 30px;
+  }
+
+  .products .container .products__desc .title {
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    text-align: center;
+    line-height: 45px;
+    font-size: 30px;
+  }
+
+  .products .container .products__desc .title::after {
+    display: none;
+  }
+
+  .products .container .products__desc .desc {
+    max-width: 726px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .products .container .products__desc .products__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .products .container .products__desc .products__contacts .products__contacts-title {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .products .container .products__desc .products__contacts .products__contacts-phone {
+    font-size: 18px;
+    line-height: 32px;
+    color: #FE7865;
+    text-decoration: underline;
+  }
+
+  .products .container .products__desc .products__contacts .products__contacts-phone svg {
+    display: none;
   }
 }
 
