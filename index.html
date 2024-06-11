@@ -202,7 +202,10 @@
           </div>
         </section>
         <section class="questions">
-          <div class="container"><img class="questions-background-picture" src="img/content/questions-background-picture.jpg" srcset="img/content/questions-background-picture@2x.jpg 2x" width="844" height="455" alt="Море">
+          <div class="container">
+            <picture> 
+              <source srcset="/img/content/questions-background-picture-tablet.jpg" media="(max-width: 1024px)"><img class="questions-background-picture" src="img/content/questions-background-picture.jpg" srcset="img/content/questions-background-picture@2x.jpg 2x" width="844" height="455" alt="Море">
+            </picture>
             <form class="questions__form">
               <div class="questions__form-title">У Вас остались вопросы?</div>
               <p class="questions__form-decs">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
@@ -244,14 +247,14 @@
             <h3 class="footer__title">Наши контакты</h3><a class="footer__email" href="puteshestviemechta@gmail.ru">
               <svg width="26" height="20" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#mail-gray"></use>
-              </svg>puteshestviemechta@gmail.ru</a><a class="footer__phone" href="tel:+749978468446">
+              </svg><span class="text">puteshestviemechta@gmail.ru</span><span class="text-tablet">Почта</span></a><a class="footer__phone" href="tel:+749978468446">
               <svg width="30" height="30" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#phone-gray"></use>
               </svg>+7 (499) -784-684-46</a>
           </div>
           <div class="footer__coop-tours footer__wrapper">
             <h3 class="footer__title">Корпоративные путешествия</h3>
-            <p class="footer__desc">Также вы можете заказать индивидуальное<br> путешествие под вашу компанию.<br> Подобные туры очень сближают<br> компанию, помогают поддерживать<br> корпоративный дух, а также являются<br> оличным времяпрепровождением</p>
+            <p class="footer__desc">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
           </div>
         </div>
       </footer>
