@@ -2754,7 +2754,7 @@ button,
   }
 
   .tours .container .tabs .tabs__slides .tabs__slide .tabs__tab-description .tabs__tab-desc {
-    min-width: 726px;
+    max-width: 726px;
     text-align: center;
   }
 
@@ -2936,6 +2936,254 @@ button,
 
   .header .container .header__burger-menu {
     padding: 10px;
+  }
+
+  .footer {
+    margin-bottom: 50px;
+  }
+
+  .footer .container {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+  }
+
+  .footer .container .footer__wrapper {
+    margin-bottom: 30px;
+  }
+
+  .footer .container .footer__wrapper .footer__li-tours {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .footer .container .footer__wrapper .footer__email .text {
+    display: none;
+  }
+
+  .footer .container .footer__wrapper .footer__email .text-tablet {
+    display: block;
+  }
+
+  .footer .container .footer__wrapper:last-child {
+    min-width: 726px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 0px;
+    padding-top: 30px;
+    border-top: solid 2px #D7D9DF;
+    text-align: center;
+  }
+
+  .footer .container .footer__contacts {
+    padding-right: 0;
+    border: none;
+  }
+
+  .banner {
+    margin-bottom: 180px;
+  }
+
+  .banner .banner__background-picture {
+    min-height: 235px;
+  }
+
+  .banner .container .banner__content .title {
+    max-width: 294px;
+    margin: 85px 0 86px 0;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 32px;
+  }
+
+  .banner .container .banner__content .subtitle {
+    max-width: 288px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    color: #2C2E3F;
+  }
+
+  .banner .container .banner__content .banner__btn {
+    min-width: 255px;
+    font-weight: 500;
+  }
+
+  .tour-places .container .tour-places__title {
+    font-size: 24px;
+  }
+
+  .tour-places .container .tour-places__subtitle-text {
+    max-width: 288px;
+  }
+
+  .tour-places .container .tour-places__places-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -16px;
+    margin-top: -16px;
+    width: calc(100% + 16px);
+  }
+
+  .tour-places .container .tour-places__places-list .tour-places__places-list-content {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: calc(100% - 20px);
+  }
+
+  .tours {
+    margin-bottom: 45px;
+  }
+
+  .tours .tabs-background {
+    display: none;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .slide-background-picture {
+    bottom: 66px;
+    max-height: 320px;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__tab-description .tabs__description-title {
+    font-size: 24px;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__tab-description .tabs__tab-desc {
+    max-width: 288px;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__tab-description .tabs__btn-order-now {
+    padding: 19px 68px;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__slide-review {
+    max-width: 268px;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__slide-review .tabs__review-title {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__slide-review .tabs__review-title::after {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__slide-review .tabs__review-content {
+    text-align: center;
+  }
+
+  .tours .container .tabs .tabs__slides .tabs__slide .tabs__slide-review .tabs__review-user {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .products {
+    margin-bottom: 100px;
+  }
+
+  .products .container .products__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .products .container .products__list .products__list-item {
+    border-radius: 6px 6px 0 0;
+  }
+
+  .products .container .products__list .products__list-item .products__button .btn-order-now {
+    padding: 19px 69px;
+    min-width: 145px;
+  }
+
+  .products .container .products__desc .title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .products .container .products__desc .desc {
+    max-width: 288px;
+    margin-bottom: 20px;
+  }
+
+  .products .container .products__desc .products__contacts .products__contacts-title {
+    line-height: 34px;
+  }
+
+  .questions {
+    margin-bottom: 70px;
+  }
+
+  .questions .container {
+    padding: 0;
+  }
+
+  .questions .container .questions-background-picture {
+    visibility: hidden;
+  }
+
+  .questions .container .questions__form {
+    padding: 50px 16px;
+    background-color: #FBF8F8;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .questions .container .questions__form .questions__form-title {
+    max-width: 288px;
+    margin-bottom: 20px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .questions .container .questions__form .questions__form-decs {
+    max-width: 288px;
+    text-align: center;
+  }
+
+  .questions .container .questions__form .questions__form-inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .questions .container .questions__form .questions__form-inputs .questions__form-input {
+    min-width: 288px;
+    padding: 16px 15px 15px 15px;
+  }
+
+  .questions .container .questions__form .questions__form-inputs .questions__form-number {
+    padding-left: 51px;
+  }
+
+  .questions .container .questions__form .questions__btn .questions__btn-order-now {
+    padding: 19px 103px;
   }
 }
 
