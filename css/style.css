@@ -2939,52 +2939,61 @@ button,
   }
 
   .footer {
-    margin-bottom: 50px;
-  }
-
-  .footer .container {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-column-gap: 50px;
-    -moz-column-gap: 50px;
-    column-gap: 50px;
+    margin-bottom: 25px;
   }
 
   .footer .container .footer__wrapper {
-    margin-bottom: 30px;
-  }
-
-  .footer .container .footer__wrapper .footer__li-tours {
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-  }
-
-  .footer .container .footer__wrapper .footer__email .text {
-    display: none;
-  }
-
-  .footer .container .footer__wrapper .footer__email .text-tablet {
-    display: block;
-  }
-
-  .footer .container .footer__wrapper:last-child {
-    min-width: 726px;
+    min-width: 288px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 0px;
-    padding-top: 30px;
-    border-top: solid 2px #D7D9DF;
-    text-align: center;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #D7D9DF;
+    padding: 0;
+    padding-bottom: 20px;
   }
 
-  .footer .container .footer__contacts {
-    padding-right: 0;
-    border: none;
+  .footer .container .footer__wrapper .footer__title {
+    line-height: 32px;
+  }
+
+  .footer .container .footer__wrapper .footer__li-tours {
+    max-width: 288px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 20px;
+  }
+
+  .footer .container .footer__wrapper .footer__email {
+    margin-bottom: 15px;
+  }
+
+  .footer .container .footer__wrapper .footer__desc {
+    max-width: 288px;
+  }
+
+  .footer .container .footer__wrapper:last-child {
+    border-top: none;
+    margin-bottom: 0;
+    padding: 0;
   }
 
   .banner {
@@ -3025,6 +3034,8 @@ button,
   }
 
   .tour-places .container .tour-places__places-list {
+    padding: 0;
+    row-gap: 16px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3037,9 +3048,9 @@ button,
 
   .tour-places .container .tour-places__places-list .tour-places__places-list-content {
     position: relative;
-    margin-left: 20px;
-    margin-top: 20px;
-    width: calc(100% - 20px);
+    margin-left: 16px;
+    margin-top: 16px;
+    width: calc(100% - 16px);
   }
 
   .tours {
