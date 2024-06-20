@@ -634,6 +634,170 @@ button,
   outline: none;
 }
 
+.form-success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.72;
+  visibility: hidden;
+  background-color: #FBF8F8;
+}
+
+.form-success .form-success-close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.questions__form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 70px;
+  padding: 50px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.1);
+}
+
+.questions__form .questions__form-title {
+  margin-bottom: 11px;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.questions__form .questions__form-decs {
+  margin: 0;
+  margin-bottom: 9px;
+  font-size: 16px;
+}
+
+.questions__form .questions__form-inputs {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 19px;
+  margin-bottom: 25px;
+}
+
+.questions__form .questions__form-inputs .questions-wraper {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  color: #FE7865;
+}
+
+.questions__form .questions__form-inputs .questions-input-wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.questions__form .questions__form-inputs .questions-input-wraper .questions-input-incorrect-data {
+  font-size: 12px;
+  line-height: 15px;
+  color: #FE7865;
+  visibility: hidden;
+}
+
+.questions__form .questions__form-inputs .questions-input-wraper .questions__form-input {
+  min-width: 269px;
+  padding: 16px 15px 15px 15px;
+  font-size: 14px;
+  border: 1px solid rgba(44, 46, 63, 0.3);
+}
+
+.questions__form .questions__form-inputs .questions-input-wraper .questions__form-number {
+  padding-left: 26px;
+}
+
+.questions__form .questions__form-inputs .questions-input-wraper .questions__form-input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #141517;
+}
+
+.questions__form .questions__form-inputs .questions-input-wraper .questions__form-input::-moz-placeholder {
+  font-size: 14px;
+  color: #141517;
+}
+
+.questions__form .questions__form-inputs .questions-input-wraper .questions__form-input::-ms-input-placeholder {
+  font-size: 14px;
+  color: #141517;
+}
+
+.questions__form .questions__form-inputs .questions-input-wraper .questions__form-input::placeholder {
+  font-size: 14px;
+  color: #141517;
+}
+
+.questions__form .questions__form-inputs .questions-input-wraper.invalid input {
+  outline: 1px solid #FE7865;
+}
+
+.questions__form .questions__form-inputs .questions-input-wraper.invalid .questions-input-incorrect-data {
+  visibility: visible;
+}
+
+.questions__form .questions__btn .questions__btn-order-now {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 18px 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  background-color: #FE7865;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.questions__form .questions__btn .questions__btn-order-now:hover {
+  background-color: #F17D4B;
+}
+
+.questions__form.success .form-success {
+  visibility: visible;
+}
+
 .container {
   width: 100%;
   max-width: 1250px;
@@ -2393,106 +2557,6 @@ button,
   z-index: -1;
 }
 
-.questions .container .questions__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 70px;
-  padding: 50px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.1);
-}
-
-.questions .container .questions__form .questions__form-title {
-  margin-bottom: 11px;
-  font-weight: 600;
-  font-size: 25px;
-}
-
-.questions .container .questions__form .questions__form-decs {
-  margin: 0;
-  margin-bottom: 24px;
-  font-size: 16px;
-}
-
-.questions .container .questions__form .questions__form-inputs {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 19px;
-  margin-bottom: 25px;
-}
-
-.questions .container .questions__form .questions__form-inputs .questions-wraper {
-  position: absolute;
-  left: 15px;
-  top: 6px;
-  color: #FE7865;
-}
-
-.questions .container .questions__form .questions__form-inputs .questions__form-input {
-  min-width: 269px;
-  padding: 16px 15px 15px 15px;
-  font-size: 14px;
-  border: 1px solid rgba(44, 46, 63, 0.3);
-}
-
-.questions .container .questions__form .questions__form-inputs .questions__form-number {
-  padding-left: 26px;
-}
-
-.questions .container .questions__form .questions__form-inputs .questions__form-input::-webkit-input-placeholder {
-  font-size: 14px;
-  color: #141517;
-}
-
-.questions .container .questions__form .questions__form-inputs .questions__form-input::-moz-placeholder {
-  font-size: 14px;
-  color: #141517;
-}
-
-.questions .container .questions__form .questions__form-inputs .questions__form-input::-ms-input-placeholder {
-  font-size: 14px;
-  color: #141517;
-}
-
-.questions .container .questions__form .questions__form-inputs .questions__form-input::placeholder {
-  font-size: 14px;
-  color: #141517;
-}
-
-.questions .container .questions__form .questions__btn .questions__btn-order-now {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 18px 40px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
-  background-color: #FE7865;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-}
-
-.questions .container .questions__form .questions__btn .questions__btn-order-now:hover {
-  background-color: #F17D4B;
-}
-
 .modal-order {
   position: fixed;
   top: 0;
@@ -2525,75 +2589,37 @@ button,
 
 .modal-order .js-modal-body .modal-close-btn {
   position: absolute;
+  z-index: 2;
   top: 20px;
   right: 20px;
+  padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
-.modal-order .js-modal-body .modal-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 72px 61px 89px 59px;
-  background-color: #FBF8F8;
+.modal-order .js-modal-body .questions__form {
+  position: unset;
+  margin: 0;
+  padding: 60px;
 }
 
-.modal-order .js-modal-body .modal-form .modal-title {
-  margin-bottom: 50px;
+.modal-order .js-modal-body .questions__form .questions__form-title {
+  margin-bottom: 35px;
   font-size: 25px;
-  font-weight: 600;
   line-height: 43px;
 }
 
-.modal-order .js-modal-body .modal-form .modal-wraper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.modal-order .js-modal-body .questions__form .questions__form-inputs {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  gap: 4px;
+}
+
+.modal-order .js-modal-body .questions__form .questions__form-inputs {
   margin-bottom: 20px;
-  gap: 20px;
-}
-
-.modal-order .js-modal-body .modal-form .modal-wraper .modal-input-sign {
-  position: absolute;
-  left: 15px;
-  top: 6px;
-  color: #FE7865;
-}
-
-.modal-order .js-modal-body .modal-form .modal-wraper input {
-  min-width: 270px;
-  padding: 16px 15px 15px 15px;
-  font-size: 14px;
-  border: 1px solid rgba(44, 46, 63, 0.3);
-}
-
-.modal-order .js-modal-body .modal-form .modal-wraper .modal-user-number {
-  padding-left: 26px;
-}
-
-.modal-order .js-modal-body .modal-form .modal-btn {
-  padding: 18px 40px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
-  background-color: #FE7865;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
 }
 
 .is-active {

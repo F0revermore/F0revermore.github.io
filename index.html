@@ -225,13 +225,24 @@
             <picture> 
               <source srcset="/img/content/questions-background-picture-tablet.jpg" media="(max-width: 1024px)"><img class="questions-background-picture" src="img/content/questions-background-picture.jpg" width="844" height="455" alt="Море">
             </picture>
-            <form class="questions__form js-form">
+            <form class="questions__form" data-form-validation>
+              <div class="form-success js-form-success">Форма успешно отправлена,<br> спасибо! :)
+                <button class="form-success-close-btn js-close-btn" type="button">
+                  <svg width="22" height="22" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#close-modal"></use>
+                  </svg>
+                </button>
+              </div>
               <div class="questions__form-title">У Вас остались вопросы?</div>
               <p class="questions__form-decs">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
               <div class="questions__form-inputs"> 
                 <div class="questions-wraper">*</div>
-                <input class="questions__form-input questions__form-number js-form-number" type="text" placeholder="+7 Введите 10 цифр номера">
-                <input class="questions__form-input questions__form-email" type="text" placeholder="E-mail">
+                <div class="questions-input-wraper" data-mask-parent><span class="questions-input-incorrect-data js-wrong-number">Данные не верны</span>
+                  <input class="questions__form-input questions__form-number" type="text" placeholder="+7 Введите 10 цифр номера" data-type="phone">
+                </div>
+                <div class="questions-input-wraper"><span class="questions-input-incorrect-data js-wrong-email">Данные не верны</span>
+                  <input class="questions__form-input questions__form-email" type="email" placeholder="E-mail" data-type="email">
+                </div>
               </div>
               <div class="questions__btn">
                 <button class="questions__btn-order-now"><span class="button-text-content">отправить </span></button>
@@ -246,13 +257,27 @@
                 <use xlink:href="img/sprite.svg#close-modal"></use>
               </svg>
             </button><img class="modal-image" src="img/content/modal-image.jpg" width="338" height="444" alt="Море">
-            <form class="modal-form js-form"><span class="modal-title">Купить тур </span>
-              <div class="modal-wraper">
-                <div class="modal-input-sign">*</div>
-                <input class="modal-user-number js-form-number" type="text" placeholder="+7 Введите 10 цифр номера">
-                <input type="text" placeholder="E-mail">
+            <form class="questions__form" data-form-validation>
+              <div class="form-success js-form-success">Форма успешно отправлена,<br> спасибо! :)
+                <button class="form-success-close-btn js-close-btn" type="button">
+                  <svg width="22" height="22" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#close-modal"></use>
+                  </svg>
+                </button>
               </div>
-              <button class="modal-btn"><span class="modal-btn-text">отправить</span></button>
+              <div class="questions__form-title">Купить тур</div>
+              <div class="questions__form-inputs"> 
+                <div class="questions-wraper">*</div>
+                <div class="questions-input-wraper" data-mask-parent><span class="questions-input-incorrect-data js-wrong-number">Данные не верны</span>
+                  <input class="questions__form-input questions__form-number" type="text" placeholder="+7 Введите 10 цифр номера" data-type="phone">
+                </div>
+                <div class="questions-input-wraper"><span class="questions-input-incorrect-data js-wrong-email">Данные не верны</span>
+                  <input class="questions__form-input questions__form-email" type="email" placeholder="E-mail" data-type="email">
+                </div>
+              </div>
+              <div class="questions__btn">
+                <button class="questions__btn-order-now"><span class="button-text-content">отправить</span></button>
+              </div>
             </form>
           </div>
         </div>
